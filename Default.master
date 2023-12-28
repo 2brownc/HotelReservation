@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Welcome to our Hotel!</title>
+    <link href="Water.css" rel="stylesheet" />
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+    <nav>
+        <span class="logo">
+            Hotel Threevago
+        </span>
+
+        <span class="navlinks">
+            <asp:LoginView runat="server">
+                <LoggedInTemplate>
+                    <span>
+                        <a href="/">Home</a>
+                    </span>
+                    <span>
+                        <a href="Booking.aspx">Book</a>
+                    </span>
+                    <span>
+                        <a href="BookInfo.aspx">Booking Info</a>
+                    </span>
+                    <span>
+                        <a href="AccountInfo.aspx">Account Info</a>
+                    </span>
+                    <span>
+                        <a href="Logout.aspx">Logout</a>
+                    </span>
+                </LoggedInTemplate>
+                <AnonymousTemplate>
+                    <span>
+                        <a href="/">Home</a>
+                    </span>
+                    <span>
+                        <a href="Login.aspx">Login</a>
+                    </span>
+
+                    <span>
+                        <a href="Register.aspx">Register</a>
+                    </span>
+                </AnonymousTemplate>
+            </asp:LoginView>
+        </span>
+    </nav>
+    </section>
+    <section>
+        <div>
+            <asp:ContentPlaceHolder ID="CphBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </section>
+</body>
+</html>
